@@ -1,4 +1,4 @@
-import react, {Fragment} from "react";
+import React, {Fragment} from "react";
 import presentationImage from '../../assets/images/presentation.png';
 import Header from '../../components/header';
 import { Column, Section, Title, Container } from "rbx";
