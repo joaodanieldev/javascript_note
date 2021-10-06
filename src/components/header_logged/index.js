@@ -30,6 +30,11 @@ function HeaderLogged(props) {
             </Link>
           </Column>
         </Column.Group>
+        <Navbar.Burger className="navbar-burger burger" arial-label="menu" aria-expanded="false" data-target="navbar-menu" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </Navbar.Burger>
       </Navbar.Brand>
 
       <Navbar.Menu>
