@@ -2,7 +2,7 @@ import React, { useState, Fragment, useEffect } from "react";
 import { push as Menu } from 'react-burger-menu';
 import { Column, Button } from "rbx";
 import List from "../notes/list";
-import Editor from "../notes/edit";
+import Editor from "./editor";
 import NotesService from '../../services/notes';
 import "../../styles/notes.scss";
 
@@ -26,6 +26,16 @@ function Notes(props) {
     await NotesService.create();
     fetchNotes();
   }
+
+  const updateNote = async (oldNote, params) => {
+    const updatedNote = await NotesService.update(oldNote._id, params);
+    const index = notes.indexOf(oldNote);
+    const newNotes = notes;
+    newNotes[index] = updatedNote.data;
+    setNotes(newNotes);
+    setCurrentNote(updatedNote.data);
+  }
+  
 
   const deleteNote = async (note) => {
     await NotesService.delete(note._id);
@@ -71,7 +81,10 @@ function Notes(props) {
 
 
         <Column size={12} className="notes-editor" id="notes-editor">
-          <Editor note={current_note} />
+          <Editor 
+            note={current_note} 
+            updateNote={updateNote}
+          />
         </Column>
       </Column.Group>
     </Fragment>
