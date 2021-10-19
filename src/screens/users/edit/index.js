@@ -3,6 +3,7 @@ import React, {Fragment} from "react";
 import HeaderLogged from '../../../components/header_logged';
 import "../../../styles/users.scss";
 import UsersEditForm from "../../../components/users/user_edit_form";
+import UsersEditFormPassword from "../../../components/users/user_edit_password_form";
 
 const UserEditScreen = () => (
   <Fragment>
@@ -29,7 +30,7 @@ const UserEditScreen = () => (
             </Title>
             <Card>
               <Card.Content>
-                Editar a senha
+                <UsersEditFormPassword />
               </Card.Content>
             </Card>
           </Column>
