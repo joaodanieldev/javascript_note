@@ -61,7 +61,7 @@ function LoginForm() {
                   <Column>
                     <a className="button is-white has-text-custom-purple"
                        onClick={e => setRedirectToRegister(true)}
-                    >Register or</a>
+                    >Cadastrar</a>
                   </Column>
                   <Column>
                     <Button color="custom-purple" outlined>Login</Button>
