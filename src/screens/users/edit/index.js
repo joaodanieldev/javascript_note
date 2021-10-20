@@ -4,6 +4,7 @@ import HeaderLogged from '../../../components/header_logged';
 import "../../../styles/users.scss";
 import UsersEditForm from "../../../components/users/user_edit_form";
 import UsersEditFormPassword from "../../../components/users/user_edit_password_form";
+import UsersDelete from "../../../components/users/user_delete";
 
 const UserEditScreen = () => (
   <Fragment>
@@ -37,7 +38,7 @@ const UserEditScreen = () => (
         </Column.Group>
         <Column.Group centered>
           <Column size={4} className="has-text-right">
-              Deletar usuario
+              <UsersDelete />
           </Column>
         </Column.Group>
       </Container>
